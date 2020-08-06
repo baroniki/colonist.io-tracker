@@ -2,9 +2,12 @@
     "name": "Colonist.io Card Tracker",
     "version": "1.0",
     "description": "This extension automatically tracks and displays all resource cards held by the each player in colonist.io.",
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
+    "content_scripts": [
+        {
+            "matches": ["*://colonist.io/*"],
+            "css": ["style.css"],
+            "js": ["content.js"]
+        }
+    ],
     "manifest_version": 2
 }
